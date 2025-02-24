@@ -46,6 +46,8 @@ function checker(){
         memArr=[];
         clicks=0;
         num=0;
+
+        level.classList.add('gameoverh3');
         levelNum= 1;
     }
     else{
