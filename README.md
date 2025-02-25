@@ -1,5 +1,5 @@
 # Simon Says!! Game
-author: Abbhiinay
+Author: Abbhiinay
 <br>
 This is a simple game that helps to boost your memory.
 <br>
@@ -7,7 +7,7 @@ This game consists of 6 differently colored buttons arranged in 2 rows( in mobil
 <br>
 Once the user presses any key to start the game, any of the boxes  is flashes for few milliseconds. the user now needs to find the flashed box.
 <br>
-if he succeeds finding the correct box, the level increases and other box flashes. now, user has to click first flashed box and the next one.
+If he succeeds finding the correct box, the level increases and other box flashes. now, user has to click first flashed box and the next one.
 <br>
 This goes on until user clicks the wrong order.
 <br>
