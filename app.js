@@ -4,6 +4,9 @@ let playground= document.querySelector(".gameGround")
 let boxes= document.querySelectorAll(".innerBox")
 let helpBtn= document.querySelector(".help")
 let resBtn = document.querySelector(".replay")
+let instBtn = document.getElementById("openPopup")
+let ClsBtn= document.getElementById("closePopup")
+let Popup= document.getElementById("instructionPopup");
 
 let started =false;
 let memArr=[];
@@ -73,7 +76,7 @@ function selectBox(){
     level.innerText=`Level ${levelNum}`
     levelNum++;
 
-    let randVal= Math.floor(Math.random()*6)
+    let randVal= Math.floor(Math.random()* boxes.length)
     flashRand(randVal);
     memArr.push(boxes[randVal].id)
 }
@@ -88,11 +91,11 @@ function flashRand(randVal){
 
 helpBtn.addEventListener('click', ()=>{
     let initText=level.innerText;
-    level.innerText = `Memory array is: ${memArr}`
+    level.innerHTML = `${memArr}`
    
     setTimeout(()=>{
      level.innerText= initText
-    },2000)
+    },2000);
 })
 
 resBtn.addEventListener('click', ()=>{
@@ -106,3 +109,15 @@ resBtn.addEventListener('click', ()=>{
     level.innerText = `Level ${levelNum}`;
     selectBox();
 })
+
+instBtn.addEventListener('click', ()=>{
+   instBtn.classList.add('clicked');
+   Popup.style.display = "block";
+})
+
+ClsBtn.addEventListener('click', ()=>{
+    Popup.style.display= "none";
+    instBtn.classList.remove('clicked');
+})
+
+
